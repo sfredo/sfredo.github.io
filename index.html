@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Imprimidor de páginas</title>
+  <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="imprimidor.js"></script>
+  <link rel="stylesheet" href="imprimidor.css">
+  <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+</head>
+<body>
+
+  <div id="fullcontent">
+    <div id="header">
+      <h1>Imprimidor de páginas</h1>
+    </div>
+
+    <div id="content">
+      <form>
+        <div id="intervalo">
+          <label>Páginas a imprimir: <input type="text" id="intervalo_ini" maxlength="3" autofocus /></label>
+          <label> até <input type="text" id="intervalo_fim" maxlength="3" /></label>
+        </div>
+        <div id="paginacao">
+          Páginas por folha:
+          <label><input type="radio" name="pag" id="paginacao_2" value="2" checked />2</label>
+          <label><input type="radio" name="pag" id="paginacao_4" value="4" />4</label>
+        </div>
+        <div id="div_processar">
+          <input type="button" id="processar" value="Processar" />
+        </div>
+      </form>
+      
+      <div id="erro"></div>
+      <div id="resultado">
+        <div id="frente"></div>
+        <div id="verso"></div>
+        <div id="obs"></div>
+      </div>
+    
+    </div>
+  </div>
+
+</body>
+</html>
